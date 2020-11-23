@@ -4,7 +4,9 @@
 ## Why?
 So I was doing a bit of reading on [SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection), specifically that of [Jinja/python](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#jinja2---remote-code-execution) which looks like this:
 
-```{{''.__class__.mro()[1].__subclasses__()[396]('cat flag.txt',shell=True,stdout=-1).communicate()[0].strip()}}{{config.__class__.__init__.__globals__['os'].popen('ls').read()}}```
+```
+{{''.__class__.mro()[1].__subclasses__()[396]('cat flag.txt',shell=True,stdout=-1).communicate()[0].strip()}}{{config.__class__.__init__.__globals__['os'].popen('ls').read()}}
+```
 
 For an explanation on how these work in python, I recommend checking out [this writeup](https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee). Essentially, it made me wonder if you could do the same thing in ruby, and you definitely can (at least the accessing other methods part). No pwnz yet from me (though I can't be the first to think of this, so it may be a nothingburger, or just a cool trick) 
 ## How it works
