@@ -41,4 +41,6 @@ We are now accessing the [Kernel](https://ruby-doc.org/core-2.7.2/Kernel.html) m
 somestring = "a string";
 somestring.class.ancestors[3].system("cat /etc/passwd");
 ```
+## PoC
+![](ruby-classes.gif)
 So, just a fun learning experience for me on how you can access things in unique ways in Ruby!
